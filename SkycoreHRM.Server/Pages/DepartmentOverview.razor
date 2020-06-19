@@ -1,0 +1,33 @@
+﻿@page "/departmentoverview"
+@inherits DepartmentOverviewBase
+
+<h1 class="page-title">All departments</h1>
+@if (Departments == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var department in Departments)
+            {
+                <tr>
+                    <td>
+                        <img src="images/stormtrooper.png" class="rounded-circle" />
+                    </td>
+                    <td>@department.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

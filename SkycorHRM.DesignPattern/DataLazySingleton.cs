@@ -17,7 +17,7 @@ namespace SkycorHRM.DesignPattern
                 new SqlDataAccessStrategy(),
                 new SqliteDataAccessStrategy(),
                 new OleDbDataAccessStrategy(),
-                new StubDataAccessStrategy()                
+                new StubDataAccessStrategy()
             };
         private DataLazySingleton() {}
         public static DataLazySingleton Instance => Nested.instance;
